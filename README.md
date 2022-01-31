@@ -5,7 +5,7 @@
     Marcos.me - v1
 </h1>
 <p align="center">
-    Primeira versão do meu <a href="#" target="_blank">portfolio</a> desenvolvido com HTML, CSS e JS.
+    Primeira versão do meu <a href="https://marcosbarcelos.github.io/Portfolio/" target="_blank">portfolio</a> desenvolvido com HTML, CSS e JS.
 </p>
 
 <img src="telas/principal.png">

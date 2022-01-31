@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=NTR&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --dark-navy: #020c1b;
     --navy: #0a192f;
     --light-navy: #112240;
     --lightest-navy: #233554;
-    --navy-shadow: rgba(2,12,27,0.7);
     --slate: #8892b0;
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
@@ -14,6 +12,7 @@
     --font-titles: 'NTR', sans-serif;
     --font-descs: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -32,20 +31,21 @@ body {
     font-family: var(--font-titles);
 }
 
-.header_menu {
+.header-menu {
     display: flex;
     justify-content: center;
     gap: 0.6rem;
 }
 
-.header_menu a {
+.header-menu a {
     color: var(--slate);
     font-size: 1.2rem;
+    font-weight: 600;
     padding: 1rem;
     text-transform: uppercase;
 }
 
-.header_menu a:hover {
+.header-menu a:hover {
     color: var(--green-bright);
 }
 
@@ -55,13 +55,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;    
+    min-height: 100vh;
     gap: 0.8rem;
+}
+
+.header-intro img {
+    width: 300px;
+    height: fit-content;
 }
 
 .header-intro-title {
     color: var(--lightest-slate);
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
 }
 
 .header-intro-title::after {
@@ -73,9 +78,11 @@ body {
 }
 
 @keyframes pisca {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -99,9 +106,8 @@ body {
 .section {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     font-family: var(--font-descs);
-    padding: 30% 1.7rem;
+    padding: 6rem 1.7rem;
 }
 
 .section-title {
@@ -111,7 +117,7 @@ body {
     padding-bottom: 2rem;
 }
 
-.section-desc {
+.section-sobre-desc {
     flex-direction: column;
     justify-content: center;
     font-size: 1.1rem;
@@ -119,13 +125,13 @@ body {
     color: var(--slate);
 }
 
-.section-desc p:nth-child(2) {
-     margin: 2rem 0;
+.section-sobre-desc p:nth-child(2) {
+    margin: 2rem 0;
 }
 
-.section-techs ul {
+.section-sobre-techs ul {
     display: grid;
-    grid-template-columns: repeat(2,minmax(150px,10px));
+    grid-template-columns: repeat(2, minmax(150px, 10px));
     grid-gap: 0.7rem;
     margin-top: 1rem;
     font-family: var(--font-descs);
@@ -134,72 +140,92 @@ body {
     color: var(--slate);
 }
 
-.section-techs i {
+.section-sobre-techs i {
     color: var(--green-bright);
     padding-right: 0.7rem;
 }
 
-.projetos-grid {
+.section-projetos-grid {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.projects-card {
+.section-projetos-card {
     display: flex;
     flex-direction: column;
-    position: relative;
-    height: 100%;
     padding: 2rem 1.75rem;
     background-color: var(--light-navy);
     border-radius: 16px;
 }
-.projects-card .links-externos {
-    color: var(--lightest-slate);
-    font-size: 1.5rem;
-    display: flex;
-    gap: 1rem;
-}
-.projects-card .folder {
-    color:var(--green-bright);
-    font-size: 1.5rem;
-}
 
-.card-header {
+.section-card-header {
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
 }
 
-.card-title {
+.section-card-header .external-links a {
+    margin: 0 0.2rem;
+    color: var(--lightest-slate);
+}
+
+.section-card-header .folder {
+    color: var(--green-bright);
+    font-size: 1.5rem;
+}
+
+.section-card-title {
     font-size: 1.5rem;
     padding-top: 1rem;
     color: var(--light-slate);
 }
 
-.card-desc {
+.section-card-desc {
     font-size: 0.95rem;
     margin: 1rem 0;
     color: var(--slate);
     margin-bottom: 4rem;
 }
 
-.card-techs {
+.section-card-techs {
     color: var(--slate);
     font-weight: 600;
 }
-/* animação fade-in */
+
+.section-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-contato span {
+    font-size: 1rem;
+    color: var(--slate)
+}
+
+.section-contato a {
+    color: var(--green-bright);
+    margin: 0.3rem;
+    font-weight: 600;
+}
+
+/* animação geral (fade-in)*/
 [data-anime] {
     opacity: 0;
     transition: opacity .6s ease-out, transform 1s ease-out;
     visibility: hidden;
-    will-change: opacity,visibility;
+    will-change: opacity, visibility;
 }
 
 [data-anime="fade-in"] {
     transform: translateY(10vh);
 }
 
-[data-anime].animate {
+[data-anime].isvisible {
     opacity: 1;
     transform: none;
     visibility: visible;
