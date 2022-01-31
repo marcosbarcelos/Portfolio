@@ -1,1 +1,206 @@
 @import url('https://fonts.googleapis.com/css2?family=NTR&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green-bright: #64ffda;
+    --font-titles: 'NTR', sans-serif;
+    --font-descs: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 14px;
+    line-height: 1.15;
+}
+
+body {
+    background-color: var(--navy);
+    font-family: var(--font-titles);
+}
+
+.header_menu {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.header_menu a {
+    color: var(--slate);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.header_menu a:hover {
+    color: var(--green-bright);
+}
+
+.header-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;    
+    gap: 0.8rem;
+}
+
+.header-intro-title {
+    color: var(--lightest-slate);
+    font-size: 2.5rem; 
+}
+
+.header-intro-title::after {
+    content: '|';
+    margin-left: 0.3rem;
+    color: var(--green-bright);
+    opacity: 1;
+    animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.header-intro-subtitle {
+    color: var(--slate);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header-intro-social a {
+    color: var(--green-bright);
+    font-size: 1.3rem;
+}
+
+.header-intro-social :nth-child(2) {
+    margin: 0 0.7rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-descs);
+    padding: 30% 1.7rem;
+}
+
+.section-title {
+    color: var(--lightest-slate);
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.section-desc {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 2em;
+    color: var(--slate);
+}
+
+.section-desc p:nth-child(2) {
+     margin: 2rem 0;
+}
+
+.section-techs ul {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(150px,10px));
+    grid-gap: 0.7rem;
+    margin-top: 1rem;
+    font-family: var(--font-descs);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--slate);
+}
+
+.section-techs i {
+    color: var(--green-bright);
+    padding-right: 0.7rem;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}
+
+.projects-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    background-color: var(--light-navy);
+    border-radius: 16px;
+}
+.projects-card .links-externos {
+    color: var(--lightest-slate);
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.projects-card .folder {
+    color:var(--green-bright);
+    font-size: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: var(--light-slate);
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    margin: 1rem 0;
+    color: var(--slate);
+    margin-bottom: 4rem;
+}
+
+.card-techs {
+    color: var(--slate);
+    font-weight: 600;
+}
+/* animação fade-in */
+[data-anime] {
+    opacity: 0;
+    transition: opacity .6s ease-out, transform 1s ease-out;
+    visibility: hidden;
+    will-change: opacity,visibility;
+}
+
+[data-anime="fade-in"] {
+    transform: translateY(10vh);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
