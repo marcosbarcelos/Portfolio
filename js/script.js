@@ -11,7 +11,7 @@ function digitando(intro) {
 const intro = document.getElementById("intro");
 digitando(intro);
 
-// animação sections
+// animação sections (geral)
 
 const target = document.querySelectorAll("[data-anime]");
 const animationClass = "isvisible";

@@ -52,7 +52,7 @@ body {
 
 .header-intro {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -71,7 +71,7 @@ body {
 
 .header-intro-title::after {
     content: '|';
-    margin-left: 0.3rem;
+    margin-left: 0.2rem;
     color: var(--green-bright);
     opacity: 1;
     animation: pisca 1s infinite;
@@ -95,15 +95,18 @@ body {
     margin-top: -1.5rem;
 }
 
+.header-intro-social :nth-child(2) {
+    margin: 0 0.7rem;
+}
+
 .header-intro-social a {
     color: var(--green-bright);
     font-size: 1.3rem;
 }
 
-.header-intro-social :nth-child(2) {
-    margin: 0 0.7rem;
+.header-intro-social a:hover {
+    color: var(--slate);
 }
-
 .section {
     display: flex;
     flex-direction: column;
@@ -119,8 +122,6 @@ body {
 }
 
 .section-sobre-desc {
-    flex-direction: column;
-    justify-content: center;
     font-size: 1.1rem;
     line-height: 2rem;
     color: var(--slate);
@@ -221,6 +222,10 @@ body {
     color: var(--green-bright);
     margin: 0.3rem;
     font-weight: 600;
+}
+
+.section-contato a:hover {
+    color: var(--slate);
 }
 
 /* animação geral (fade-in)*/

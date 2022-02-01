@@ -11,6 +11,9 @@
 <img src="telas/principal.png">
 
 ## 🎨 Paleta de cores
+<p align="center">
+    Inspired by <a href="https://github.com/gazijarin" target="_blank">Gazi Jarin</a>
+</p>
 
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
