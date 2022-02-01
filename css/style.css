@@ -52,7 +52,6 @@ body {
 
 .header-intro {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -128,12 +127,12 @@ body {
     padding-bottom: 2rem;
 }
 
-.section-sobre-image img {
-    display: none;
-}
-
 .section-sobre-desc p:nth-child(2) {
     margin: 2rem 0;
+}
+
+.section-sobre-image img {
+    display: none;
 }
 
 .section-sobre-techs ul {
