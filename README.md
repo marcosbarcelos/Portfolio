@@ -10,7 +10,7 @@
 
 <img src="telas/principal.png">
 
-## 🎨 Paleta de cor
+## 🎨 Paleta de cores
 
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
