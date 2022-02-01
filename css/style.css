@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=NTR&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+/* desenvolvido em mobile first */
+
 :root {
     --navy: #0a192f;
     --light-navy: #112240;
@@ -23,7 +25,6 @@
 
 html {
     font-size: 14px;
-    line-height: 1.15;
 }
 
 body {
@@ -41,7 +42,7 @@ body {
     color: var(--slate);
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.5rem;
     text-transform: uppercase;
 }
 
@@ -56,11 +57,10 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    gap: 0.8rem;
 }
 
 .header-intro img {
-    width: 300px;
+    width: 21.5rem;
     height: fit-content;
 }
 
@@ -92,6 +92,7 @@ body {
     color: var(--slate);
     font-size: 1.8rem;
     font-weight: 400;
+    margin-top: -1.5rem;
 }
 
 .header-intro-social a {
@@ -107,7 +108,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-descs);
-    padding: 6rem 1.7rem;
+    padding: 6rem 1.7rem 1rem 1.7rem;
 }
 
 .section-title {
@@ -121,8 +122,13 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 1.1rem;
-    line-height: 2em;
+    line-height: 2rem;
     color: var(--slate);
+    padding-bottom: 2rem;
+}
+
+.section-sobre-image img {
+    display: none;
 }
 
 .section-sobre-desc p:nth-child(2) {
@@ -133,7 +139,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 10px));
     grid-gap: 0.7rem;
-    margin-top: 1rem;
     font-family: var(--font-descs);
     font-size: 0.95rem;
     font-weight: 700;
@@ -157,6 +162,12 @@ body {
     padding: 2rem 1.75rem;
     background-color: var(--light-navy);
     border-radius: 16px;
+}
+
+.section-projetos-card:hover {
+    position: relative;
+    bottom: 0.6rem;
+    transition: bottom .9s ease-in-out;
 }
 
 .section-card-header {
@@ -184,9 +195,8 @@ body {
 
 .section-card-desc {
     font-size: 0.95rem;
-    margin: 1rem 0;
+    margin: 1rem 0 4rem 0;
     color: var(--slate);
-    margin-bottom: 4rem;
 }
 
 .section-card-techs {
@@ -199,7 +209,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .section-contato span {
@@ -229,4 +239,80 @@ body {
     opacity: 1;
     transform: none;
     visibility: visible;
+}
+
+/* responsividade tablets e desktops */
+@media (min-width: 690.98px) {
+    .header-menu a {
+        font-size: 1.5rem;
+    }
+
+    .header-intro {
+        min-height: 70vh;
+        margin-bottom: 5rem;
+    }
+
+    .header-intro img {
+        width: 40rem;
+    }
+
+    .header-intro-title {
+        font-size: 4rem;
+    }
+
+    .header-intro-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .header-intro-social a {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding-left: 15%;
+        padding-top: 5%;
+        padding-right: 15%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title ::after {
+        content: "";
+        display: block;
+        width: 21rem;
+        height: 0.01rem;
+        margin-left: 18rem;
+        position: relative;
+        bottom: 4rem;
+        background-color: var(--lightest-slate);
+    }
+
+    .section-sobre-content {
+        display: flex;
+    }
+
+    .section-sobre-desc {
+        max-width: 500px;
+        line-height: 1.6rem;
+    }
+
+    .section-sobre-image {
+        position: relative;
+        left: 2rem;
+    }
+
+    .section-sobre-image:hover {
+        bottom: 1rem;
+    }
+
+    .section-sobre-image img {
+        display: flex;
+        max-width: 200px;
+        height: fit-content;
+        border-radius: 1rem;
+        box-shadow: 0.3rem 1rem 1.2rem rgba(0, 0, 0, 0.3);
+        border: 0.15rem solid var(--green-bright);
+    }
 }
