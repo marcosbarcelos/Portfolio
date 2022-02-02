@@ -166,8 +166,9 @@ body {
 
 .section-projetos-card:hover {
     position: relative;
-    bottom: 0.6rem;
-    transition: bottom .9s ease-in-out;
+    left: 0.3rem;
+    transition: background-color .5s ease-out;
+    background-color: var(--lightest-navy);
 }
 
 .section-card-header {
