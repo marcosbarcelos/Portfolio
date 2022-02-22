@@ -22,7 +22,6 @@ function animeScroll() {
     if (windowTop > elemento.offsetTop) {
       elemento.classList.add(animationClass);
     }
-    console.log(elemento.offsetTop);
   });
 }
 
