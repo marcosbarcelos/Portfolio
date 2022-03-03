@@ -1,5 +1,7 @@
 // animação header-intro
 
+const intro = document.getElementById("intro");
+
 function digitando(intro) {
   const textoIntro = intro.textContent.split("");
   intro.textContent = "";
@@ -8,7 +10,6 @@ function digitando(intro) {
   });
 }
 
-const intro = document.getElementById("intro");
 digitando(intro);
 
 // animação sections (geral)
