@@ -1,35 +1,37 @@
-// animação header-intro
+ const target = document.querySelectorAll('[data-anime]');
 
-const intro = document.getElementById("intro");
+ function animations() {
+   typing();
 
-function digitando(intro) {
-  const textoIntro = intro.textContent.split("");
-  intro.textContent = "";
-  textoIntro.forEach((letra, i) => {
-    setTimeout(() => (intro.textContent += letra), 75 * i);
-  });
-}
+   if (target.length) {
+     window.addEventListener('scroll', function () {
+       animeScroll();
+     })
+   }
 
-digitando(intro);
+   function typing() {
+     const introtitle = document.getElementById('intro');
+     //entrega um array com o elemento separado por letra
+     const textArray = introtitle.textContent.split('');
 
-// animação sections (geral)
+     introtitle.textContent = '';
+     textArray.forEach((letter, i) => {
+       setTimeout(() => (introtitle.textContent += letter), 75 * i);
+     });
+   }
 
-const target = document.querySelectorAll("[data-anime]");
-const animationClass = "isvisible";
+   function animeScroll() {
+     const animationClass = 'isvisible';
+     //fórmula que obtém a altura atual da janela
+     const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
 
-function animeScroll() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
-  target.forEach(function (elemento) {
-    if (windowTop > elemento.offsetTop) {
-      elemento.classList.add(animationClass);
-    }
-  });
-}
+     //obtém os elementos que contém o data-anime e sua distância da janela
+     target.forEach(function (element) {
+       if (windowTop > element.offsetTop) {
+         element.classList.add(animationClass);
+       }
+     });
+   }
+ }
 
-animeScroll();
-
-if (target.length) {
-  window.addEventListener("scroll", function () {
-    animeScroll();
-  });
-}
+ animations();
