@@ -95,12 +95,12 @@ body {
 }
 
 .header-intro-social :nth-child(2) {
-    margin: 0 0.7rem;
+    margin: 0 1rem;
 }
 
 .header-intro-social a {
     color: var(--green-bright);
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .header-intro-social a:hover {
@@ -214,13 +214,13 @@ body {
 }
 
 .section-contact span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--slate)
 }
 
 .section-contact a {
     color: var(--green-bright);
-    margin: 0.3rem;
+    margin: 0.5rem;
     font-weight: 600;
 }
 
