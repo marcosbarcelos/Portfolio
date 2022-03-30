@@ -120,22 +120,22 @@ body {
     padding-bottom: 2rem;
 }
 
-.section-sobre-desc {
+.section-about-desc {
     font-size: 1.1rem;
     line-height: 2rem;
     color: var(--slate);
     padding-bottom: 2rem;
 }
 
-.section-sobre-desc p:nth-child(2) {
+.section-about-desc p:nth-child(2) {
     margin: 2rem 0;
 }
 
-.section-sobre-image img {
+.section-about-image img {
     display: none;
 }
 
-.section-sobre-techs ul {
+.section-about-techs ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 10px));
     grid-gap: 0.7rem;
@@ -145,18 +145,18 @@ body {
     color: var(--slate);
 }
 
-.section-sobre-techs i {
+.section-about-techs i {
     color: var(--green-bright);
     padding-right: 0.7rem;
 }
 
-.section-projetos-grid {
+.section-projects-grid {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.section-projetos-card {
+.section-projects-card {
     display: flex;
     flex-direction: column;
     padding: 2rem 1.75rem;
@@ -164,7 +164,7 @@ body {
     border-radius: 16px;
 }
 
-.section-projetos-card:hover {
+.section-projects-card:hover {
     position: relative;
     left: 0.3rem;
     transition: background-color .5s ease-out;
@@ -205,7 +205,7 @@ body {
     font-weight: 600;
 }
 
-.section-contato {
+.section-contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,18 +213,18 @@ body {
     margin-top: 1rem;
 }
 
-.section-contato span {
+.section-contact span {
     font-size: 1rem;
     color: var(--slate)
 }
 
-.section-contato a {
+.section-contact a {
     color: var(--green-bright);
     margin: 0.3rem;
     font-weight: 600;
 }
 
-.section-contato a:hover {
+.section-contact a:hover {
     color: var(--slate);
 }
 
@@ -294,25 +294,25 @@ body {
         background-color: var(--lightest-slate);
     }
 
-    .section-sobre-content {
+    .section-about-content {
         display: flex;
     }
 
-    .section-sobre-desc {
+    .section-about-desc {
         max-width: 500px;
         line-height: 1.6rem;
     }
 
-    .section-sobre-image {
+    .section-about-image {
         position: relative;
         left: 2rem;
     }
 
-    .section-sobre-image:hover {
+    .section-about-image:hover {
         bottom: 1rem;
     }
 
-    .section-sobre-image img {
+    .section-about-image img {
         display: flex;
         max-width: 200px;
         height: fit-content;
