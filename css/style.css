@@ -222,6 +222,7 @@ body {
     color: var(--green-bright);
     margin: 0.5rem;
     font-weight: 600;
+    font-size: 1.4rem;
 }
 
 .section-contact a:hover {
