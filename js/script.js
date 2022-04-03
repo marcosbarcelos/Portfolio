@@ -25,7 +25,7 @@
      //fórmula que obtém a altura atual da janela
      const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
 
-     //obtém os elementos que contém o data-anime e sua distância da janela
+     //obtém os elementos que contém o data-anime e a sua distância da janela
      target.forEach(function (element) {
        if (windowTop > element.offsetTop) {
          element.classList.add(animationClass);
