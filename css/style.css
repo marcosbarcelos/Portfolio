@@ -26,6 +26,7 @@
 /* fonte base (1rem = 14px) */
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 body {
